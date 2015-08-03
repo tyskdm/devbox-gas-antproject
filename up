@@ -1,0 +1,19 @@
+#! /bin/sh
+BASEDIR=`dirname $0`
+PROJECTDIR=$(cd ${BASEDIR}/../../; pwd)
+PROJECTNAME=`basename ${PROJECTDIR}`
+CONTAINERNAME=devbox-${PROJECTNAME}
+
+if [ $# -lt 1 ]; then
+  GAS_CONFIG_DIR=${PROJECTDIR}/../.gas-manager
+else
+  GAS_CONFIG_DIR=$1
+fi
+
+docker run -it -d \
+  --name="${CONTAINERNAME}" \
+  -v ${PROJECTDIR}:${PROJECTDIR} \
+  -v ${GAS_CONFIG_DIR}:${PROJECTDIR}/../.gas-manager \
+  -w ${PROJECTDIR} \
+  tyskdm/devbox-gas:latest bash
+
