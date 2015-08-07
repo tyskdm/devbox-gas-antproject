@@ -1,7 +1,5 @@
 #
-# Badge2 project development tools.
-# Build command: docker build -t tyskdm/tools-badge2:0.x .
-# Execute command: ./up
+# development tools for Google apps script.
 #
 FROM ubuntu:14.04
 MAINTAINER tyskdm <tsuyoshi.kodama@gmail.com>
