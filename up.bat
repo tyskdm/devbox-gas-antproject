@@ -50,4 +50,4 @@ docker run -it -d ^
   -v %PROJECTDIR%:%PROJECTDIR% ^
   -v %GAS_CONFIG_DIR%:%PROJECTDIR%../.gas-manager ^
   -w %PROJECTDIR% ^
-  tyskdm/devbox-gas:latest bash
+  tyskdm/devbox-gas-antproject:latest bash
